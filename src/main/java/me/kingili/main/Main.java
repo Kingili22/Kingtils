@@ -6,7 +6,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 
-@Mod(modid = "forgetemplate", name = "Forge Template", version = "1.0")
+@Mod(modid = "kingtils", name = "Kingtils", version = "1.0")
 
 public class Main {
     @Mod.EventHandler
@@ -14,6 +14,7 @@ public class Main {
         // $USER = The username of the currently logged in user.
         // Simply prints out Hello, $USER.
         MinecraftForge.EVENT_BUS.register(new OnTick());
+        MinecraftForge.EVENT_BUS.register(new ReadMessage());
         ClientCommandHandler.instance.registerCommand(new HelpCommand());
         System.out.println("Hello, " + Minecraft.getMinecraft().getSession().getUsername() + "!");
     }

@@ -1,17 +1,17 @@
 [
   {
-    "modid": "Kingtils",
+    "modid": "kingtils",
     "name": "Kingtils",
     "description": "Kingtils, a mod made by Kingili to learn Forge!",
     "version": "${version}",
     "mcversion": "${mcversion}",
-    "url": "",
+    "url": "https://kingili.me",
     "updateUrl": "",
     "authorList": [
-      ""
+      "Kingili"
     ],
     "credits": "",
-    "logoFile": "",
+    "logoFile": "./icon.jpeg",
     "screenshots": [],
     "dependencies": []
   }
