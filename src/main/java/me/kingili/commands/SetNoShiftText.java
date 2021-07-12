@@ -1,7 +1,6 @@
 package me.kingili.commands;
 
 import me.kingili.config.Config;
-import net.minecraft.client.Minecraft;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.CommandException;
 import net.minecraft.command.ICommand;
@@ -10,11 +9,11 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.EnumChatFormatting;
 
-public class SetText extends CommandBase implements ICommand{
+public class SetNoShiftText extends CommandBase implements ICommand{
 
     @Override
     public String getCommandName() {
-        return "SetShiftText";
+        return "SetNoShiftText";
     }
 
     @Override
@@ -23,7 +22,7 @@ public class SetText extends CommandBase implements ICommand{
     }
 
     public static String usage(ICommandSender arg0) {
-        return new SetText().getCommandUsage(arg0);
+        return new SetNoShiftText().getCommandUsage(arg0);
     }
 
     @Override
@@ -40,7 +39,7 @@ public class SetText extends CommandBase implements ICommand{
             return;
         }
 
-        Config.ConfigHandler.writeStringConfig("shifttxt", "shifttxtnoshift", arg1[0]);
+        Config.ConfigHandler.writeStringConfig("shiftinfo", "shifttxtnoshift", arg1[0]);
         player.addChatMessage(new ChatComponentText(EnumChatFormatting.AQUA + "Set Text" + EnumChatFormatting.AQUA + " " + arg1[0]));
     }
 }

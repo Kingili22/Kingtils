@@ -12,12 +12,12 @@ import net.minecraft.util.EnumChatFormatting;
 public class SetShiftXPosition extends CommandBase implements ICommand {
         @Override
         public String getCommandName() {
-            return "SetShiftColor";
+            return "SetShiftXPosition";
         }
 
         @Override
         public String getCommandUsage(ICommandSender sender) {
-            return "/" + getCommandName() + " <key>" + " <key2>";
+            return "/" + getCommandName() + " <key>";
         }
 
         @Override
@@ -33,15 +33,13 @@ public class SetShiftXPosition extends CommandBase implements ICommand {
                 player.addChatMessage(new ChatComponentText(EnumChatFormatting.RED + "Usage: " + getCommandUsage(arg0)));
                 return;
             }
-            Integer color = 0;
+            Integer Xposition = 1;
             try {
-                color = parseInt(arg1[0]);
+                Xposition = parseInt(arg1[0]);
             } catch(NumberFormatException error){
                 player.addChatMessage(new ChatComponentText(EnumChatFormatting.RED + "You Must Give an Integer for your argument!"));
                 return;
             }
-            Config.ConfigHandler.writeIntConfig("shiftinfo", "shiftcolor", color);
+            Config.ConfigHandler.writeIntConfig("shiftinfo", "shiftxposition", Xposition);
         }
     }
-
-}

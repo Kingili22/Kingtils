@@ -1,4 +1,4 @@
-package me.kingili.main;
+package me.kingili.events;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.ChatComponentText;
@@ -15,7 +15,7 @@ public class ReadMessage {
         if (CleanText.contains(":")) {
             String[] parsedText = CleanText.split(": ");
             String unformattedMSG = parsedText[1].trim();
-            System.out.println(unformattedMSG);
+            //System.out.println(unformattedMSG);
             if (unformattedMSG.equals("Hello")) {
                 Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.AQUA + "Hello World"));
             }

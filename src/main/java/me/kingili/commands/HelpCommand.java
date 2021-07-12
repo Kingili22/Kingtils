@@ -1,11 +1,11 @@
-package me.kingili.main;
+package me.kingili.commands;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.util.ChatComponentText;
 
-class HelpCommand extends CommandBase {
+public class HelpCommand extends CommandBase {
 
     @Override
     public String getCommandName() {
