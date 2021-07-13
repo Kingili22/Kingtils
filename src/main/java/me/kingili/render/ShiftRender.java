@@ -21,7 +21,7 @@ public void RenderText(final RenderGameOverlayEvent event) throws IOException {
                     Minecraft.getMinecraft().gameSettings.showDebugInfo) {
                 return;
             }
-        if (Config.ConfigHandler.config == null){
+            if (Config.ConfigHandler.config == null){
             Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.RED + "No Text Set, set it with /SetShiftText"));
         }
         if(GuiScreen.isShiftKeyDown()) {

@@ -22,10 +22,10 @@ public class Main {
         ClientCommandHandler.instance.registerCommand(new SetNoShiftText());
         ClientCommandHandler.instance.registerCommand(new SetShiftText());
         ClientCommandHandler.instance.registerCommand(new SetShiftColor());
-    };
+        MinecraftForge.EVENT_BUS.register(new ShiftRender());
+    }
     public void onFMLInitialization(FMLInitializationEvent event) {
         MinecraftForge.EVENT_BUS.register(new ReadMessage());
-        MinecraftForge.EVENT_BUS.register(new ShiftRender());
         System.out.println("Hello, " + Minecraft.getMinecraft().getSession().getUsername() + "!");
     }
 }

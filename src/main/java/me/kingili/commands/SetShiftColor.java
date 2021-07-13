@@ -26,6 +26,11 @@ public class SetShiftColor extends CommandBase implements ICommand {
     }
 
     @Override
+    public boolean canCommandSenderUseCommand(ICommandSender sender) {
+        return true;
+    }
+
+    @Override
     public void processCommand(ICommandSender arg0, String[] arg1) throws CommandException {
         final EntityPlayer player = (EntityPlayer) arg0;
 
