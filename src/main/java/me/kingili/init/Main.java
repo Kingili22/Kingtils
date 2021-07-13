@@ -1,7 +1,6 @@
 package me.kingili.init;
 
 import me.kingili.commands.*;
-import me.kingili.config.Config;
 import me.kingili.events.ReadMessage;
 import me.kingili.render.ShiftRender;
 import net.minecraft.client.Minecraft;
